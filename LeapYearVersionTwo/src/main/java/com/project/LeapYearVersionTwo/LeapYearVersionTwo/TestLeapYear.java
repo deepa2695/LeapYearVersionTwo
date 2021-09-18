@@ -37,4 +37,9 @@ public class TestLeapYear {
     public void shouldReturnFalseIfYearIsDivisibleByFourAndHundred(){
 		Assert.assertFalse(leapYear.isLeapYear(1900));
     }
+	
+	@Test(expected = NullPointerException.class)
+    public void shouldHandleExceptionIfGivenInputIsNull(){
+		Assert.assertNull(leapYear.isLeapYear(null));
+    }
 }
