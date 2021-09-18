@@ -22,4 +22,9 @@ public class TestLeapYear {
     public void shouldReturnTrueIfYearIsDivisibleByFourAndNotDivisibleByHundred(){
 		Assert.assertTrue(leapYear.isLeapYear(1996));
     }
+	
+	@Test
+    public void shouldReturnFalseIfYearIsNotDivisibleByFourHundred(){
+        Assert.assertFalse(leapYear.isLeapYear(1100));
+    }
 }
